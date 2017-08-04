@@ -1,5 +1,36 @@
 <!DOCTYPE html>
 <html>
-<title>我的第一个页面</title>
-这是内容，这下你相信了吧，哈哈
+<head>
+  <meta charset="utf-8">
+  <title>pp的博客</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+  <link rel="stylesheet" href="https://typo.sofi.sh/typo.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    body{
+      padding:16px;
+    }
+    img{
+      max-width:100%
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+  <script>
+    var markdown=`
+# 我的第一篇博客  
+**pp**  
+>不要相信网上名人名言: --鲁迅  
+
+
+大家好，我今天学会markdown了。      
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1501842931602&di=cb2abd08ac440eb6c4045e3cdeb4f7cd&imgtype=0&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201611%2F01%2F20161101211330_XYMzJ.jpeg">
+`
+    var html=marked(markdown);
+    console.log(html)
+    
+     document.getElementById('content').innerHTML =html
+  </script>
+</body>
 </html>
